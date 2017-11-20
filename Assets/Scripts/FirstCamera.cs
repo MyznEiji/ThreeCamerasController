@@ -3,13 +3,25 @@ using DG.Tweening;
 
 public class FirstCamera : MonoBehaviour 
 {	
-	static public Tween firstTween;
+	[SerializeField]private AnimationCurve customEasing;
+	static public Sequence firstTween;
 		void Start () 
 	{	
-		firstTween = transform.DOMove(new Vector3(0,0,-2),7f)
-				 .OnComplete(() => 
-				 {
-					 if(gameObject)CameraController.ChangeCamera(0);
-				 });	
+		firstTween = DOTween.Sequence();
+		firstTween = firstTween.Append
+		(
+			transform.DOMove(new Vector3(0,15,-2),7f)
+					 .OnComplete(() => 
+					 {
+						 CameraController.ChangeCamera(0);
+					 })
+		);	
+		
+		
+		firstTween.Join
+		(
+			transform.DORotate(new Vector3(60f,0,0),7f)
+						.SetEase(customEasing)
+		);
 	}
 }

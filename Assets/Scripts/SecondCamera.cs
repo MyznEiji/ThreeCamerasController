@@ -1,15 +1,19 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using DG.Tweening;
 
 public class SecondCamera : MonoBehaviour 
 {
-	static public Tween secondTween;
-	void Start () 
+	[SerializeField] private Transform secondCameraTarget;
+	IEnumerator Start()
 	{
-		secondTween = transform.DOMove(new Vector3(0,2,2),7f)
-				 .OnComplete(() =>
-				 {
-					 if(gameObject)CameraController.ChangeCamera(1);
-				 });	
+		yield return new WaitForSeconds(7f);
+		CameraController.ChangeCamera(1);
+
+	}
+	void Update()
+	{
+		transform.position = secondCameraTarget.position;
+		transform.rotation = secondCameraTarget.rotation;
 	}
 }
