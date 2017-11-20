@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreeCamerasController", "Assembly-CSharp.csproj", "{B1F8E751-BB6B-B9A0-AA49-037A49A1D3EA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreeCamerasController", "Assembly-CSharp-Editor.csproj", "{E7B45885-A0D5-B5CD-B62D-DFD8AA8FD9E8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{B1F8E751-BB6B-B9A0-AA49-037A49A1D3EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B1F8E751-BB6B-B9A0-AA49-037A49A1D3EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B1F8E751-BB6B-B9A0-AA49-037A49A1D3EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7B45885-A0D5-B5CD-B62D-DFD8AA8FD9E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7B45885-A0D5-B5CD-B62D-DFD8AA8FD9E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7B45885-A0D5-B5CD-B62D-DFD8AA8FD9E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7B45885-A0D5-B5CD-B62D-DFD8AA8FD9E8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
