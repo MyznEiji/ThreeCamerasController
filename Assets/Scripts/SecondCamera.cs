@@ -1,16 +1,15 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using DG.Tweening;
 
 public class SecondCamera : MonoBehaviour 
 {
-	//void Start () 
-	//{
-	//	
-	//}
-	
-	//void Update () 
-	//{
-	//	
-	//}
+	static public Tween secondTween;
+	void Start () 
+	{
+		secondTween = transform.DOMove(new Vector3(0,2,2),7f)
+				 .OnComplete(() =>
+				 {
+					 if(gameObject)CameraController.ChangeCamera(1);
+				 });	
+	}
 }
